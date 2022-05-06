@@ -1,0 +1,393 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>iNiik Solution - Every Solution Here!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='' rel='stylesheet'>
+    <link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="tropical-storm.svg" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+    <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap);
+
+        body {
+            font-family: "Roboto", sans-serif;
+            background: #EDEEEF;
+            height: 100vh;
+            position: relative;
+        }
+
+        .body {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        .primary-color {
+            color: #FCA737;
+        }
+
+        .testimonial-view {
+            max-width: 900px;
+            padding: 50px 15px;
+            margin: 0 auto 70px auto;
+            border-radius: 3px;
+        }
+
+        .testimonial-view.top-margin .testimonial-block_user {
+            margin-top: -60px;
+        }
+
+        @media (min-width: 900px) {
+            .testimonial-view.top-margin .testimonial-block_user {
+                margin-top: -100px;
+            }
+        }
+
+        .testimonial-view img.left-quote {
+            opacity: 0.01;
+            width: 20%;
+            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+            position: absolute;
+            left: 40%;
+        }
+
+        @media (min-width: 900px) {
+            .testimonial-view .carousel-control-prev {
+                left: -50px;
+            }
+
+            .testimonial-view .carousel-control-next {
+                right: -50px;
+            }
+
+            .testimonial-view .carousel-control-next-icon,
+            .testimonial-view .carousel-control-prev-icon {
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        .section-header,
+        .testimonial-block_user_info_name {
+            font-weight: bold;
+            text-align: center;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .section-header:after,
+        .testimonial-block_user_info_name:after {
+            content: "";
+            height: 4px;
+            width: 100px;
+            background-color: #FCA737;
+            position: absolute;
+            bottom: 0;
+            left: calc(50% - 50px);
+        }
+
+        .testimonial-block {
+            padding: 15px;
+            margin: 50px 15px;
+            background: #fff;
+            color: #333;
+            -webkit-box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (min-width: 900px) {
+            .testimonial-block {
+                padding: 50px;
+                margin: 50px;
+            }
+        }
+
+        .testimonial-block .row {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            place-items: center;
+        }
+
+        .testimonial-block .testimonial-block_user {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .testimonial-block .testimonial-block_user .testimonial-block_user_image {
+            position: relative;
+            margin: 0 15px 30px 15px;
+        }
+
+        .testimonial-block .testimonial-block_user .testimonial-block_user_image img {
+            height: 170px;
+            width: 170px;
+            border: 7px solid #FFDFB8;
+            border-radius: 170px;
+            -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .testimonial-block .testimonial-block_user .testimonial-block_user_info .testimonial-block_user_info_name {
+            margin-bottom: 10px;
+        }
+
+        .testimonial-block .testimonial-block_user .testimonial-block_user_info .testimonial-block_user_info_name:after {
+            width: 50px;
+            left: calc(50% - 25px);
+        }
+
+        .testimonial-block .testimonial-block_content {
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .top-margin .testimonial-block .row {
+            place-items: normal;
+        }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <link href="signin.css" rel="stylesheet">
+    <script type='text/javascript' src=''></script>
+    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+    <script type='text/javascript'
+        src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
+</head>
+
+<body oncontextmenu='false' class='snippet-body'>
+    <header>
+        <div class="px-3 py-2 bg-dark text-white">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="/"
+                        class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" fill="currentColor"
+                            class="bi bi-tropical-storm bi me-2" viewBox="0 0 16 16">
+                            <path d="M8 9.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+                            <path
+                                d="M9.5 2c-.9 0-1.75.216-2.501.6A5 5 0 0 1 13 7.5a6.5 6.5 0 1 1-13 0 .5.5 0 0 1 1 0 5.5 5.5 0 0 0 8.001 4.9A5 5 0 0 1 3 7.5a6.5 6.5 0 0 1 13 0 .5.5 0 0 1-1 0A5.5 5.5 0 0 0 9.5 2zM8 3.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8z" />
+                        </svg>
+                        <span class="fs-4">iNiik Solution</span>
+                    </a>
+
+                    <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                        <li>
+                            <a href="#" class="nav-link text-white bg-primary rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    class="bi bi-house-door bi d-block mx-auto mb-1" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z" />
+                                </svg>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="dashboard" class="nav-link text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    class="bi bi-speedometer2 bi d-block mx-auto mb-1" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z" />
+                                    <path fill-rule="evenodd"
+                                        d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z" />
+                                </svg>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li>
+                            <a href="career" class="nav-link text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    class="bi bi-calendar-check bi d-block mx-auto mb-1" viewBox="0 0 16 16">
+                                    <path
+                                        d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z" />
+                                    <path
+                                        d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z" />
+                                </svg>
+                                Career
+                            </a>
+                        </li>
+                        <li>
+                            <a href="product.html" class="nav-link text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    class="bi bi-grid bi d-block mx-auto mb-1" viewBox="0 0 16 16">
+                                    <path
+                                        d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z" />
+                                </svg>
+                                Products
+                            </a>
+                        </li>
+                        <li>
+                            <a href="client.html" class="nav-link text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    class="bi bi-person-circle bi d-block mx-auto mb-1" viewBox="0 0 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                    <path fill-rule="evenodd"
+                                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                </svg>
+                                Client
+                            </a>
+                        </li>
+                        <li>
+                            <a href="about" class="nav-link text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    class="bi bi-boxes bi d-block mx-auto mb-1" viewBox="0 0 16 16">
+                                    <path
+                                        d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434L7.752.066ZM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567L4.25 7.504ZM7.5 9.933l-2.75 1.571v3.134l2.75-1.571V9.933Zm1 3.134 2.75 1.571v-3.134L8.5 9.933v3.134Zm.508-3.996 2.742 1.567 2.742-1.567-2.742-1.567-2.742 1.567Zm2.242-2.433V3.504L8.5 5.076V8.21l2.75-1.572ZM7.5 8.21V5.076L4.75 3.504v3.134L7.5 8.21ZM5.258 2.643 8 4.21l2.742-1.567L8 1.076 5.258 2.643ZM15 9.933l-2.75 1.571v3.134L15 13.067V9.933ZM3.75 14.638v-3.134L1 9.933v3.134l2.75 1.571Z" />
+                                </svg>
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                        <li>
+                            <a href="contact" class="nav-link text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    class="bi bi-telephone bi d-block mx-auto mb-1" viewBox="0 0 16 16">
+                                    <path
+                                        d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                                </svg>
+                                Contact Us
+                            </a>
+                        </li>
+                        <li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="px-3 py-2 border-bottom mb-3">
+            <div class="container d-flex flex-wrap justify-content-center">
+                <form class="col-12 col-lg-auto mb-2 mb-lg-0 me-lg-auto">
+                    <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </header>
+    <section class="body">
+        <div class="container">
+            <h1 class="section-header"><b>Happy Clients</b></h1>
+            <p class="text-muted text-center">What people say</p>
+            <div class="testimonial-view">
+                <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="testimonial-block">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="testimonial-block_user">
+                                            <div class="testimonial-block_user_image">
+                                                <img src="krishna.jpg" alt="User">
+                                            </div>
+                                            <div class="testimonial-block_user_info">
+                                                <h2 class="testimonial-block_user_info_name">Krishna</h2>
+                                                <h4>Customer</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="testimonial-block_content">
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+                                                consequuntur repellendus nemo suscipit explicabo veniam similique
+                                                quaerat vitae! Alias reprehenderit aliquam temporibus porro iste
+                                                corrupti laboriosam nihil eos? Nemo ratione, provident! Suscipit,
+                                                accusantium. Molestias, reiciendis, in nihil perferendis similique
+                                                voluptas aliquam, nisi consectetur eum, atque nemo sint. Nostrum,
+                                                reprehenderit, quod.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-block">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="testimonial-block_user">
+                                            <div class="testimonial-block_user_image">
+                                                <img src="himanshu.jpg" alt="User">
+                                            </div>
+                                            <div class="testimonial-block_user_info">
+                                                <h2 class="testimonial-block_user_info_name">Himanshu</h2>
+                                                <h4>Customer</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="testimonial-block_content">
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+                                                consequuntur repellendus nemo suscipit explicabo veniam similique
+                                                quaerat vitae! Alias reprehenderit aliquam temporibus porro iste
+                                                corrupti laboriosam nihil eos? Nemo ratione, provident! Suscipit,
+                                                accusantium. Molestias, reiciendis, in nihil perferendis similique
+                                                voluptas aliquam, nisi consectetur eum, atque nemo sint. Nostrum,
+                                                reprehenderit, quod.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="testimonial-block">
+                                <div class="row">
+                                    <div class="col-md-5">
+                                        <div class="testimonial-block_user">
+                                            <div class="testimonial-block_user_image">
+                                                <img src="aliya.jpg" alt="User">
+                                            </div>
+                                            <div class="testimonial-block_user_info">
+                                                <h2 class="testimonial-block_user_info_name">Aliya</h2>
+                                                <h4>Customer</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="testimonial-block_content">
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+                                                consequuntur repellendus nemo suscipit explicabo veniam similique
+                                                quaerat vitae! Alias reprehenderit aliquam temporibus porro iste
+                                                corrupti laboriosam nihil eos? Nemo ratione, provident! Suscipit,
+                                                accusantium. Molestias, reiciendis, in nihil perferendis similique
+                                                voluptas aliquam, nisi consectetur eum, atque nemo sint. Nostrum,
+                                                reprehenderit, quod.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script type='text/javascript'></script>
+</body>
+
+</html>
